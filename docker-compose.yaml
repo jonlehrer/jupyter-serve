@@ -1,0 +1,9 @@
+version: '3'
+services:
+  jupyter-serve:
+    build: .
+    ports:
+    - "80:8888"
+    volumes:
+    - '.:/opt/jupyter-serve'
+    command: ["jupyter", "notebook", "--no-browser", "--ip=0.0.0.0"]
